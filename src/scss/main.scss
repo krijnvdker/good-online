@@ -91,6 +91,10 @@ header{
 	.hamburger-menu{
 		display: flex!important;
 		order: 1;
+		margin-left: 10px;
+		i{
+			font-size: 28px;
+		}
 	}
 	.logo{
 		order: 2;
@@ -104,5 +108,10 @@ header{
 	.call-us-mobile{
 		display: flex!important;
 		order: 3;
+		margin-right: 10px;
+		i{
+			font-size: 28px;
+			color: #FF9900;
+		}
 	}
 }
