@@ -20,17 +20,63 @@ header{
 		}
 		.logo{
 			margin-left: 10px;
+			flex: 1 0;
 			img{
 				height: 120px;
 			}
 		}
 		ul.desktop-nav{
+			flex: 1 40%;
 			margin-bottom: 0;
 			li{
 				display: inline-block;
-				margin-right: 50px;
+				margin-right: 47px;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				position: relative;
+				border-bottom: 4px solid transparent;
 				ul{
 					display: none;
+					li{
+						border: none!important;
+					}
+				}
+				&:hover{
+					border-bottom: 4px solid grey;
+					a{
+						text-decoration: none;
+					}
+					ul{
+						display: block!important;
+						position: absolute;
+						background: white;
+						top: 128px;
+						min-width: 200px;
+						left: 0;
+						border-top: 5px solid $orangeGoodOnline;
+						border-bottom: 5px solid $orangeGoodOnline;
+						li{
+							display: block;
+							margin-right: 0px;
+							padding: 10px 20px 10px 20px;
+							border: none!important;
+							&:first-of-type{
+								padding-top:20px;
+							}
+							&:last-of-type{
+								padding-bottom:20px;
+							}
+							a{
+								font-weight: normal;
+							}
+						}
+					}
+				}
+				&.active{
+					border-bottom: 4px solid grey;
+					a{
+						color: $orangeGoodOnline;
+					}
 				}
 				a{
 					color: black;
@@ -77,8 +123,12 @@ header{
 				order: 3;
 				flex: 1 100%;
 				margin-left: 10px;
-				margin-top: 30px;
-				margin-bottom: 40px;
+				li{
+					padding-top: 40px;
+					ul{
+						top: 118px!important;
+					}
+				}
 			}
 			.call-us{
 				order: 2;
@@ -90,6 +140,7 @@ header{
 @media(max-width: 767px){
 	.hamburger-menu{
 		display: flex!important;
+		flex: auto;
 		order: 1;
 		margin-left: 10px;
 		i{
@@ -98,12 +149,14 @@ header{
 	}
 	.logo{
 		order: 2;
+		flex: auto!important;
 	}
 	ul.desktop-nav{
 		display: none;
 	}
 	.call-us{
 		display: none;
+		flex: 1 33.33333333%;;
 	}
 	.call-us-mobile{
 		display: flex!important;
