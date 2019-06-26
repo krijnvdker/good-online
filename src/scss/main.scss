@@ -8,6 +8,25 @@
 
 $orangeGoodOnline: #FF9900;
 $openSans: 'Open Sans';
+$oswald: 'Oswald';
+
+h2{
+	font-family: $oswald;
+	font-size: 36px;
+}
+
+.btn{
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	width: 190px;
+	&.a{
+		background: $orangeGoodOnline;
+	}
+	&.b{
+		border: 1px solid white;
+	}
+}
 
 .mobile-nav{
 	visibility: hidden;
@@ -149,12 +168,6 @@ $openSans: 'Open Sans';
 					padding-bottom: 50px;
 					position: relative;
 					border-bottom: 4px solid transparent;
-					ul{
-						display: none;
-						li{
-							border: none!important;
-						}
-					}
 					&:hover{
 						border-bottom: 4px solid grey;
 						a{
@@ -169,6 +182,7 @@ $openSans: 'Open Sans';
 							left: 0;
 							border-top: 5px solid $orangeGoodOnline;
 							border-bottom: 5px solid $orangeGoodOnline;
+							z-index: 2;
 							li{
 								display: block;
 								margin-right: 0px;
@@ -184,6 +198,12 @@ $openSans: 'Open Sans';
 									font-weight: normal;
 								}
 							}
+						}
+					}
+					ul{
+						display: none;
+						li{
+							border: none!important;
 						}
 					}
 					&.active{
@@ -223,11 +243,82 @@ $openSans: 'Open Sans';
 	
 	.slider{
 		width: 100%;
-		height: 550px;
-		background-image: url('../images/header1.png');
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center center;
+		.slide-content{
+			color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			p{
+				font-size: 18px;
+				line-height: 200.7%;
+				margin-top: 50px;
+				margin-bottom: 50px;
+			}
+		}
+		div{
+		}
+		.slide-1{
+			background-image: url('../images/header1.png');
+			background-position: center center;
+			width: 100%;
+			height: 550px;
+			.container{
+				height: 100%;
+				display: flex;
+				.btn{
+					&.b{
+						margin-left: 30px;
+					}
+				}
+			}
+		}
+		.slide-2{
+			background-image: url('../images/header1.png');
+			background-position: center center;
+			width: 100%;
+			height: 550px;
+		}
+		.slide-3{
+			background-image: url('../images/header1.png');
+			background-position: center center;
+			width: 100%;
+			height: 550px;
+		}
+	}
+	.diensten-home{
+		background-color: #F4F4F4;
+		padding-top: 75px;
+		.container{
+			.row{
+				div{
+					img{
+						width: 100%;
+					}
+					.content{
+						padding-left: 10px;
+						padding-right: 10px;
+						background-color: white;
+						padding-bottom: 10px;
+						h3{
+							font-weight: bold;
+							font-size: 18px;
+							padding-top: 20px;
+							margin-bottom: 20px;
+						}
+						p{
+							font-size: 16px;
+							line-height: 35px;
+							margin-bottom: 50px;
+						}
+						.btn{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

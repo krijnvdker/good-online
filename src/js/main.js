@@ -14,4 +14,9 @@ $(document).ready(function(){
         $('.fa-plus').toggle();
         $('.fa-minus').toggle();
     });
+
+    $(".slider").owlCarousel({
+        items: 1,
+        dots: false
+    });
 });
