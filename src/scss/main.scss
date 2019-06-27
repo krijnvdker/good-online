@@ -28,6 +28,12 @@ h2{
 	}
 }
 
+.quote{
+	font-style: italic;
+	color: $orangeGoodOnline;
+	font-size: 19px;
+}
+
 .mobile-nav{
 	visibility: hidden;
 	position: fixed;
@@ -255,6 +261,7 @@ h2{
 				line-height: 200.7%;
 				margin-top: 50px;
 				margin-bottom: 50px;
+				font-weight: 300;
 			}
 		}
 		div{
@@ -313,6 +320,7 @@ h2{
 							font-size: 16px;
 							line-height: 35px;
 							margin-bottom: 50px;
+							font-weight: 300;
 						}
 						.btn{
 							width: 100%;
@@ -324,8 +332,45 @@ h2{
 	}
 	.down-bg{
 		width: 100%;
+		margin-top: -230px;
 		svg{
 			width: 100%;
+		}
+	}
+	.usps-home{
+		background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/bgusps.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding-bottom: 80px;
+		margin-top: -15%;
+		padding-top: 21%;
+		h3{
+			font-weight: 900;
+			font-size: 18px;
+		}
+		p{
+			font-size: 14px;
+			color: #464646;
+			font-weight: 300;
+		}
+	}
+	.about-home{
+		h2{
+			text-transform: uppercase;
+			font-size: 36px;
+		}
+		p{
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 200.7%;
+		}
+	}
+}
+
+@media(max-width: 1199px){
+	.main{
+		.down-bg{
+			margin-top: -160px;
 		}
 	}
 }
@@ -382,6 +427,19 @@ h2{
 		i{
 			font-size: 28px;
 			color: #FF9900;
+		}
+	}
+	.main{
+		.down-bg{
+			margin-top: -100px;
+		}
+	}
+}
+
+@media(max-width: 575px){
+	.main{
+		.down-bg{
+			margin-top: -20px;
 		}
 	}
 }
