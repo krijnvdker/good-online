@@ -290,11 +290,8 @@ h2{
 		}
 	}
 	.diensten-home{
-		background: green;
-    /* The points are: centered top, left bottom, right bottom */
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-		padding-top: 75px;
-		width: 100%;
+		padding-top: 80px;
+		background: #F4F4F4;
 		.container{
 			.row{
 				div{
@@ -323,6 +320,12 @@ h2{
 					}
 				}
 			}
+		}
+	}
+	.down-bg{
+		width: 100%;
+		svg{
+			width: 100%;
 		}
 	}
 }
