@@ -258,6 +258,8 @@ h2{
 			}
 		}
 		div{
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 		.slide-1{
 			background-image: url('../images/header1.png');
@@ -288,8 +290,11 @@ h2{
 		}
 	}
 	.diensten-home{
-		background-color: #F4F4F4;
+		background: green;
+    /* The points are: centered top, left bottom, right bottom */
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
 		padding-top: 75px;
+		width: 100%;
 		.container{
 			.row{
 				div{
