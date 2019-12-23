@@ -15,8 +15,10 @@ $(document).ready(function(){
         $('.fa-minus').toggle();
     });
 
-    $(".slider").owlCarousel({
-        items: 1,
-        dots: false
-    });
+    // $("#slider").owlCarousel({
+    //     items: 1,
+    //     dots: false,
+    //     nav: false,
+    //     loop: true
+    // });
 });
