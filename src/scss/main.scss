@@ -59,6 +59,10 @@ header{
 				-o-transform: rotate(180deg);
 				-ms-transform: rotate(180deg);
 				transform: rotate(180deg);
+				cursor: pointer;
+			}
+			&.open{
+				background: #4B4B4B;
 			}
 			img{
 				padding: 22px;
@@ -139,7 +143,91 @@ header{
 			border-top-right-radius: 50px;
 			img{
 				padding: 30px;
+				-webkit-animation: mover 0.7s infinite  alternate;
+				animation: mover 0.7s infinite  alternate;
+				-webkit-animation: mover 0.7s infinite  alternate;
+				animation: mover 0.7s infinite  alternate;
 			}
 		}
 	}
+	.menu-overlay{
+		position: fixed;
+		right: -100%;
+		top: 0;
+		width: 100%;
+		height: 95vh;
+		z-index: 9;
+		background: #FF9900;
+		opacity: 0.7;
+		-webkit-transition: right 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+		-moz-transition: right 0.5s ease-out;  /* Firefox 4-15 */
+		  -o-transition: right 0.5s ease-out;  /* Opera 10.50–12.00 */
+			 transition: right 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+		&.open{
+			left: 0;
+		}
+	}
+	.menu{
+		height: 120%;
+		width: 60%;
+		border-bottom-left-radius: 200%;
+		border-top-left-radius: 200%;
+		position: fixed;
+		right: -60%;
+		background: white;
+		top: 0;
+		z-index: 999;
+		-webkit-transition: right 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+		-moz-transition: right 0.5s ease-out;  /* Firefox 4-15 */
+		  -o-transition: right 0.5s ease-out;  /* Opera 10.50–12.00 */
+			 transition: right 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+		&.open{
+			right: 0;
+		}
+		.menu-wrapper{
+			width: 64%;
+			margin-left: 24%;
+			margin-top: 17%;
+			overflow: hidden;
+			nav{
+				ul{
+					li{
+						list-style: none;
+						ul{
+							margin-top: -10px;
+							li{
+								a{
+									font-weight: normal;
+									font-family: $openSans;
+									color: black;
+									font-size: 14px;
+								}
+							}
+						}
+						a{
+							h4{
+								color: #FF9900;
+								font-weight: bold;
+								font-size: 20px;
+								margin-top: 30px;
+								margin-bottom: 30px;
+							}
+						}
+					}
+				}
+				ul.two-column{
+					column-count: 2;
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
 }
